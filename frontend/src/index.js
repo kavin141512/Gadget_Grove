@@ -8,6 +8,9 @@ import Home from './Pages/Home';
 import Menu from './Pages/Menu';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
+import Login from './Pages/Login';
+import Newproduct from './Pages/Newproduct';
+import Signup from './Pages/Signup';
 const router = createBrowserRouter(
   createRoutesFromElements(
     //path='/' indicates homepage
@@ -16,6 +19,9 @@ const router = createBrowserRouter(
        <Route path='menu' element={<Menu/>}/>
        <Route path='about' element={<About/>}/>
        <Route path='contact' element={<Contact/>}/>
+       <Route path='login' element={<Login/>}/>
+       <Route path='newproduct' element={<Newproduct/>}/>
+       <Route path='signup' element={<Signup/>}/> 
 
     </Route>
   )

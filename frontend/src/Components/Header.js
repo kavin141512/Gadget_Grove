@@ -21,10 +21,10 @@ export const Header = () => {
              </Link>
              <div className='flex items-center gap-9 md:gap-7 mx-2'>
                <nav className='flex gap-4 p-3 md:gap-4 text-base md:text-lg text-white'>
-                   <Link to={''} className='hover:bg-black p-1 rounded-lg'>Home</Link>
-                   <Link to={'menu'}className='hover:bg-black p-1 rounded-lg'>Menu</Link>
-                   <Link to={'about'}className='hover:bg-black p-1 rounded-lg'>About</Link>
-                   <Link to={'contact'} className='hover:bg-black p-1 rounded-lg'>Contact</Link>
+                   <div className='p-1 rounded-lg hover:bg-violet-950'><Link to={''}>Home</Link></div>
+                   <div className='p-1 rounded-lg hover:bg-violet-950'><Link to={'menu'}>Menu</Link></div>
+                   <div className='p-1 rounded-lg hover:bg-violet-950'><Link to={'about'}>About</Link></div>
+                   <div className='p-1 rounded-lg hover:bg-violet-950'><Link to={'contact'}>Contact</Link></div>
 
                </nav>
                <div className='cart text-4xl text-slate-100 cursor-pointer' >

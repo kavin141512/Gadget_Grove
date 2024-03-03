@@ -47,16 +47,25 @@ function Signup() {
         }
       })
       }
-  
+      console.log(process.env.REACT_APP_SERVER_DOMIN);
       //handle submit
-      const handleSubmit = (e) =>{
+      const handleSubmit = async(e) =>{
+            e.preventDefault();
            //extracting from data
            const {fname,email,password,confirmpassword} = data;
            if(fname && email && password && confirmpassword){
               if(password == confirmpassword){
                 //send to server
+                const fetchData = await fetch('http://localhost:8080/signup',{
+                  method:"POST",
+                headers:{"content-type":"application/json"},
+                body: JSON.stringify(data)
+                })  
+
+                const dataRes = await fetchData.json();
+                console.log(dataRes);
                 alert("success");
-                 navigate("/login");
+                // navigate("/login");
               }
               else{
                 alert("check password and confirm password"); 

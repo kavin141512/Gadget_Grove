@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo1 from "../images/logo1.png"
+import logo2 from "../images/logo2.png"
 import { Link } from 'react-router-dom'
 import { FaUserAstronaut } from "react-icons/fa";
 import { IoCart } from "react-icons/io5";
@@ -11,34 +11,34 @@ export const Header = () => {
     setShowMenu(state => !state)
   }
   return (
-    <header className='fixed shadow-md w-full h-16 px-2 md:px-4 z-4'>
-        <div className='flex items-center h-full justify-between'>
+    <header className='fixed shadow-lg w-full h-16 m-0 border-purple-950 border'>
+        <div className='flex items-center h-full justify-between bg-gradient-to-r from-purple-900 to-pink-500 m-0 p-0'>
 
              <Link to={""}>
                  <div className='h-16 w-20'>
-                    <img src={logo1} className='h-full'/>
+                    <img src={logo2} className='h-12 rounded-lg mt-3'/>
                  </div>
              </Link>
-             <div className='flex items-center gap-3 md:gap-7'>
-               <nav className='flex gap-4 md:gap-4 text-base md:text-lg text-white'>
-                   <Link to={''}>Home</Link>
-                   <Link to={'menu'}>Menu</Link>
-                   <Link to={'about'}>About</Link>
-                   <Link to={'contact'}>Contact</Link>
+             <div className='flex items-center gap-9 md:gap-7 mx-2'>
+               <nav className='flex gap-4 p-3 md:gap-4 text-base md:text-lg text-white'>
+                   <Link to={''} className='hover:bg-black p-1 rounded-lg'>Home</Link>
+                   <Link to={'menu'}className='hover:bg-black p-1 rounded-lg'>Menu</Link>
+                   <Link to={'about'}className='hover:bg-black p-1 rounded-lg'>About</Link>
+                   <Link to={'contact'} className='hover:bg-black p-1 rounded-lg'>Contact</Link>
 
                </nav>
-               <div className='cart text-4xl text-slate-100'>
-               <div className='absolute  text-white bg-blue-900 h-4 w-4 rounded-full m-0 p-0 text-sm text-center'>0</div>
+               <div className='cart text-4xl text-slate-100 cursor-pointer' >
+               <div className='absolute  text-white bg-cyan-900 h-4 w-4 rounded-full m-0 p-0 text-sm text-center'>0</div>
                    <IoCart/>
                    
                </div>
-               <div className='profile text-2xl text-slate-100' onClick={handleShowMenu}>
-                 <div className='border-2 border-solid border-slate-100 p-1 rounded-full cursor-pointer'>
+               <div className='profile text-2xl text-slate-100 ' onClick={handleShowMenu}>
+                 <div className='border-2 border-solid border-slate-100 p-1 m-0 rounded-full cursor-pointer '>
                  <FaUserAstronaut/>
                  </div> 
 
                  {
-                  showMenu && (<div className='absolute right-2 bg-slate-500 shadow drop-shadow-md py-2 px-2 flex flex-col'>
+                  showMenu && (<div className='absolute gap-2 right-2 rounded-2xl bg-violet-950 shadow drop-shadow-md py-3 px-3 flex flex-col'>
                   <Link to = {"newproduct"} className='whitespace-nowrap cursor-pointer text-xl'>New Product</Link>
                   <Link to={"login"} className='whitespace-nowrap cursor-pointer text-xl'>Login</Link>
                </div>)

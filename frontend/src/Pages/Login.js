@@ -45,7 +45,7 @@ const Login = () => {
   return (
     <div className='p-2 md:p-4'>
 
-    <div className='w-full max-w-md bg-white m-auto flex items-center flex-col p-4 rounded-3xl'>
+    <div className='bg-violet-950 bg-opacity-50 w-full max-w-md  m-auto flex items-center flex-col p-4 rounded-3xl'>
        {/*<h1 className='text-center text-2xl font-bold'>SignUp</h1>*/}
         <div className='w-20 overflow-hidden rounded-full drop-shadow-md shadow-lg flex items-center m-auto'>
              <img src={signupicon} className='w-full'/>
@@ -53,18 +53,18 @@ const Login = () => {
         <form className='w-full py-3 flex flex-col ' onSubmit={handleSubmit}>
              
            
-             <label htmlFor='email'>Email</label>
+             <label htmlFor='email'className='text-white text-xl font-mono'>Email</label>
              <input type={'email'} id='email' name='email'value={data.email} onChange={handleOnchange}className='bg-slate-200 w-full px-2 py-1 rounded mt-2 mb-2  focus-within:outline-blue-900'/>
              
-             <label htmlFor='password'>Password</label>
+             <label htmlFor='password' className='text-white text-xl font-mono'>Password</label>
             <div className='flex px-2 py-1 bg-slate-200 rounded mt-2 mb-2 focus-within:outline focus-within:outline-blue-900'>
              <input type={showPassword?'text':'password'} id='password' name='password'value={data.password} onChange={handleOnchange}className='bg-slate-200 w-full rounded outline-none '/>
              <span className='flex text-xl cursor-pointer'onClick={handleshowPassword}>{showPassword ?<BiShowAlt/> : <BiHide />}</span>
             </div>
-            <button className='bg-blue-400 hover:bg-blue-600 w-full max-w-[150px] mt-4 text-blue-100 cursor-pointer m-auto text-xl font-semibold py-1 rounded-full text-center font-mono '>
+            <button className='bg-red-500 hover:bg-red-900 hover:text-white w-full max-w-[150px] mt-4 text-red-950 cursor-pointer m-auto text-xl font-semibold py-1 rounded-full text-center font-mono '>
               Login</button> 
         </form>
-        <p className='text-left text-sm'>Don't Have An Account ?<Link to={"/signup"} className='text-blue-500 underline'> Signup</Link></p>
+        <p className='text-left text-white font-mono text-sl'>Don't Have An Account ?<Link to={"/signup"} className='text-blue-500'> Signup</Link></p>
     </div>
 </div>
   )
